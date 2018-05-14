@@ -7,12 +7,13 @@
 
 - name: start a nginx container
   docker_container:
-    image: kofonfor/nginx-carbonized:0.1.27
+    image: kofonfor/nginx-carbonized:0.1.28
     state: started
     read_only: no
     hostname: "{{ ansible_hostname }}-{{ nginx_container_name }}"
     ports:
       - "{{ docker_nginx_port }}:80"
+      - "{{ docker_nginx_ssl_port }}:443"
     volumes:
       - "{{ ext_nginx_logs_volume }}:/var/log/nginx"
       - "{{ ext_nginx_conf_volume }}:/etc/nginx"
