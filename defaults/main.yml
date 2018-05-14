@@ -1,0 +1,6 @@
+nginx_container_name: nginx
+docker_nginx_port: 8080
+ext_nginx_logs_volume: "/var/lib/docker-extvols/{{ nginx_container_name }}/logs"
+ext_nginx_conf_volume: "/etc/nginx"
+ext_nginx_le_volume: "/etc/letsencrypt"
+ext_nginx_varwww_volume: "/var/www"
