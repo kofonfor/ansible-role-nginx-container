@@ -7,7 +7,7 @@
 
 - name: start a nginx container
   docker_container:
-    image: kofonfor/nginx-carbonized:0.1.28
+    image: kofonfor/nginx-carbonized:0.1.31
     state: started
     read_only: no
     hostname: "{{ ansible_hostname }}-{{ nginx_container_name }}"
